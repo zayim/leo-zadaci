@@ -23,20 +23,11 @@ int main(int argc, char *argv[])
 {
     llong n;
 
-    char* input_path = "M_ulaz.dat";
-    char* output_path = "M_izlaz.dat";
-
-    if (argc > 1) input_path = argv[1];
-    if (argc > 2) output_path = argv[2];
-
-    ifstream input(input_path);
-    ofstream output(output_path);
-
-    input >> n;
+    cout << "Input? ";
+    cin >> n;
 
     llong x = f(n);
-
-    output << x << endl;
+    cout << "Output: " << x << endl;
 
     return 0;
 }
