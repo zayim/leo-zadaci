@@ -13,8 +13,8 @@ input (n=100, a[1..n-1])
     return s2 - s1
 ```
 
-Space: O(1) // ne racunajuci input
-Time: O(n)
+Space: O(1) // ne racunajuci input  
+Time: O(n)  
 
 
 ### Second - fast processing optimize
@@ -31,8 +31,8 @@ input (n=100, a[1..n-1])
 			return i
 ```
 
-Space: O(n) // ne racunajuci input
-Time: O(n)
+Space: O(n) // ne racunajuci input  
+Time: O(n)  
 
 ### Third - low storage optimize
 
@@ -50,8 +50,8 @@ input (n=100, a[1..n-1])
 			return i 
 ```
 
-Space: O(1) // ne racunajuci input
-Time: O(n^2)
+Space: O(1) // ne racunajuci input  
+Time: O(n^2)  
 
 ### Fourth - low storage optimize
 
@@ -66,5 +66,5 @@ input (n=100, a[1..n-1])
 	return n
 ```
 
-Space: O(1) // ne racunajuci input
-Time: O(nlogn) // ako uzmemo neki O(nlogn) sorting algoritam, npr. merge sort
+Space: O(1) // ne racunajuci input  
+Time: O(nlogn) // ako uzmemo neki O(nlogn) sorting algoritam, npr. merge sort  
