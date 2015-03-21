@@ -39,7 +39,7 @@ int comparePoints (const void * a, const void * b)
  * Dakle, to je otprilike 10 + 8n + n*5*N operacija, te uzmimo u obzir i sortiranje, njegova kopmpleksnost je O(nlogn), pa neka i
  * na to ode nekih 20nlogn operacija. Ukupno, to je 10 + 8n + n*5*N + 20nlogn operacija. Za N=100, to je:
  * 10 + 8n + 500n + 20nlogn. Dakle, treba rijesiti jednacinu 20nlogn + 508n + 10 = 1073741824.
- * Aproksimativno rjesenje je n ~= 1.35842*10^6, dakle oko 1.3 miliona tacaka bi se trebalo moci obraditi za 1s.
+ * Aproksimativno rjesenje je n ~= 1.35842*10^6, dakle oko nesto vise od milion tacaka bi se trebalo moci obraditi za 1s.
  */
 int* f(int N, int n, double** a)
 {
