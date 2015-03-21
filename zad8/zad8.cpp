@@ -2,27 +2,17 @@
 #include <fstream>
 typedef long long llong;
 using namespace std;
-inline llong log10(llong n)
-{
-    if (n==0) return 0;
-
-    llong k=0;
-    while (n!=0)
-    {
-        n=n/10;
-        k++;
-    }
-    return k-1;
-}
 llong f(llong n)
 {
-    llong lg=log10(n), sum=0, k=1, s=1;
+    llong lg=0, sum=0, k=1, s=1, tmp=n/10;
 
-    for (int i=1; i<=lg; i++)
+    while (tmp != 0)
     {
+        lg++;
         s = k*10 - k;
         k *= 10;
-        sum += s*i;
+        sum += s*lg;
+        tmp /= 10;
     }
 
     sum += (n-k+1)*(lg+1);
