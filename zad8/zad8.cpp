@@ -1,5 +1,4 @@
 #include <iostream>
-#include <fstream>
 typedef long long llong;
 using namespace std;
 llong f(llong n)
