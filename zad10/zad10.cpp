@@ -3,11 +3,11 @@
 #include <queue>
 #include <sstream>
 #include <fstream>
-
+typedef unsigned long long ullong;
 using namespace std;
-int log2(int n)
+ullong log2(ullong n)
 {
-    int k=0;
+    ullong k=0;
     while (n%2==0)
     {
         n=n/2;
@@ -15,25 +15,25 @@ int log2(int n)
     }
     return k;
 }
-int power2(int n)
+ullong power2(ullong n)
 {
-    int k=1;
-    for (int i=0; i<n; i++)
+    ullong k=1;
+    for (ullong i=0; i<n; i++)
         k*=2;
     return k;
 }
-string str(int k)
+string str(ullong k)
 {
     stringstream ss;
     ss << k;
     return ss.str();
 }
-void g(int n, stack<string> &s)
+void g(ullong n, stack<string> &s)
 {
     if (n==1) return;
 
-    int k = log2(n);
-    int m = n/power2(k);
+    ullong k = log2(n);
+    ullong m = n/power2(k);
 
     if (k!=0)
     {
@@ -52,7 +52,7 @@ void g(int n, stack<string> &s)
     s.push(string("ADD A,B"));
     g(n-1, s);
 }
-stack<string> f(int n)
+stack<string> f(ullong n)
 {
     stack<string> s;
     g(n, s);
@@ -62,7 +62,7 @@ stack<string> f(int n)
 }
 int main(int argc, char *argv[])
 {
-    int n;
+    ullong n;
 
     char* input_path = "M_ulaz.dat";
     char* output_path = "M_izlaz.dat";
@@ -80,6 +80,8 @@ int main(int argc, char *argv[])
         output << s.top() << endl;
         s.pop();
     }
+
+    return 0;
 }
 
 
